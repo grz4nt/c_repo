@@ -23,7 +23,6 @@ int repeat() {
 int main() {
 	char przyklad;
 	printf("Program rysuje trojkat o ilosci poziomow z zakresu wpisanego N (od 1 do 15).\n");
-
 	do {
 		printf("\nWybierz przyklad (a-f): ");
 		scanf_s(" %c", &przyklad, 1);
@@ -36,7 +35,6 @@ int main() {
 			printf("Nie ma takiego przykladu.\n");
 			repeat();
 		}
-
 		if (n < 1 || n > 15) {
 			printf("Wpisana wartosc nie spelnia wymagan programu.\n");
 		}
@@ -63,11 +61,9 @@ int main() {
 			default:
 				return repeat();
 			}
-
 		}
 		printf("\n");
 	} while (repeat());
-
 	return 0;
 }
 
@@ -139,7 +135,6 @@ void przykladE() {
 	}
 	printf("\n");
 }
-
 
 void przykladF() {
 	printf("f)\n");
