@@ -3,10 +3,10 @@
 #include <time.h>
 
 int main() {
-	srand(time(NULL));
 	int liczba;
 	int liczby[6];
 	int duplikat;
+	srand(time(NULL));
 
 	for (int i = 0; i < 5; i++) {
 		do

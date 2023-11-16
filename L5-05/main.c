@@ -3,17 +3,17 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct {
-    int id;
-    char imie[20];
-    char nazwisko[20];
-    int rok_u, mies_u, dzien_u;
-} tosoba;
 
 int main() {
     srand(time(NULL));
-    tosoba student;
+    typedef struct {
+        int id;
+        char imie[20];
+        char nazwisko[20];
+        int rok_u, mies_u, dzien_u;
+    } tosoba;
 
+    tosoba student;
     sprintf_s(student.imie, sizeof(student.imie), "Imie %d", rand() % 100);
     sprintf_s(student.nazwisko, sizeof(student.nazwisko), "Naz %d", rand() % 100);
     student.rok_u = rand() % (2000 - 1900) + 1900;
