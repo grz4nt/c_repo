@@ -2,14 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
-Napisz program, w którym do 10 elementowej tablicy wczytujemy N imion z klawiatury
-(N jest wprowadzane przez u¿ytkownika podczas dzia³ania programu). Po wprowadzeniu imion,
-na ekranie ma pojawiæ siê informacja o iloœci imion koñcz¹cych siê na literê ‘a’. Po wykonaniu
-operacji program ma zapytaæ czy chcemy zakoñczyæ program czy wykonaæ go jeszcze raz.
-*/
-
-
 int main() {
     int n, i;
     int a = 0;
