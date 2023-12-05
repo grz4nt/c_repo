@@ -15,13 +15,13 @@ void random(int tabR[10][10], int n, int low, int high) {
 void przekatna(int tabR[10][10], int n) {
     int suma1 = 0;
     int suma2 = 0;
-    for (int i = 0, j = n-1; i < n && j >= 0; i++, j--) {
+    for (int i = 0, j = n - 1; i < n && j >= 0; i++, j--) {
         suma1 += tabR[i][i];
         suma2 += tabR[i][j];
     }
     printf("Pierwsza przekatna: %d\n", suma1);
     printf("Druga przekatna: %d\n", suma2);
-    printf("Suma przekatnych macierzy: %d\n", suma1+suma2);
+    printf("Suma przekatnych macierzy: %d\n", suma1 + suma2);
 }
 
 int main() {
