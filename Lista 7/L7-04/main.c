@@ -1,6 +1,27 @@
-﻿/*
-Napisz program, w którym tworzona jest macierz górnotrójkątną o rozmiarze (5x5)
-wypełniona losowymi liczbami rzeczywistymi zakresu <0,10>. Zawartość tablicy ma być
-wyprowadzona na ekran (każdy element ma być wypisany na 5 polach z dwoma
-miejscami po przecinku).
-*/
+﻿#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void macierz(float tabR[5][5], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i > j)
+                printf("  -  ");
+            else {
+                tabR[i][j] = ((float) rand() / ((float)RAND_MAX)) * 10;
+                printf("%5.2f", tabR[i][j]);
+            }
+        }
+        printf("\n");
+    }
+}
+
+
+int main() {
+    int n = 5;
+    float tabR[5][5];
+    srand(time(NULL));
+    printf("Losowa macierz gornotrojkatna %dx%d:\n", n, n);
+    macierz(tabR, n);
+    return 0;
+}
