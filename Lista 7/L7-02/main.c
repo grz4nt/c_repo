@@ -1,7 +1,6 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <ctype.h>
+
 int n = 5;
 int tabl[5][5];
 int i, j, k;
