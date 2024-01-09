@@ -1,27 +1,33 @@
 #include <stdio.h>
+#include <math.h>
 
-int ciag(int x) {
-	int c, i;
-	printf("Ciag: {0, ");
-	for (i = 1; i < x; i++) {
-		c = i * i * i;
-		printf("%d, ", c);
-	}
-
-	printf("%d}\n", x * x * x);
-	int suma = 0;
-	for (i = 1; i <= x; i++) {
-		suma += i * i * i;
+double ciag(int x) {
+	int p = 2;
+	double suma = 0;
+	double c;
+	for (int i = 1; i <= x; i++) {
+		c = (1.0/i) * pow(-1,p);
+		if (i == 1) {
+			printf("Szereg: %g", c);
+		}
+		else if (c > 0) {
+			printf(" + %g", c);
+		}
+		else {
+			printf(" - %g", c*-1);
+		}
+		p++;
+		suma += c;
 	}
 	return suma;
 }
 
 
 int main() {
-	int k;
-	printf("Wpisz k: ");
-	scanf_s("%d", &k);
-	int suma = ciag(k);
-	printf("Suma liczb to: %d", suma);
+	int n;
+	printf("Wpisz n: ");
+	scanf_s("%d", &n);
+	double suma = ciag(n);
+	printf("\nSuma szeregu to: %.20lf", suma);
 	return 0;
 }
