@@ -7,8 +7,8 @@ int ciag(int x) {
 		c = i * i * i;
 		printf("%d, ", c);
 	}
-
 	printf("%d}\n", x * x * x);
+
 	int suma = 0;
 	for (i = 1; i <= x; i++) {
 		suma += i * i * i;
